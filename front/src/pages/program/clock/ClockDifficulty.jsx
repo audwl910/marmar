@@ -9,19 +9,19 @@ export default function ClockDifficulty() {
       <S.SignUpBox>
         <S.SignUpHeader>시계 읽기</S.SignUpHeader>
         <S.SignUpMiniBox>
-          <Link to="/ClockProgram">
+          <Link to="/ClockProgram" state={{ difficulty: 'high' }}>
             <S.SignUpUserBox>
               <S.SignUpUserH1>상</S.SignUpUserH1>
               <img src="" alt="" />
             </S.SignUpUserBox>
           </Link>
-          <Link to="/ClockProgram">
+          <Link to="/ClockProgram" state={{ difficulty: 'mid' }}>
             <S.SignUpUserBox>
               <S.SignUpUserH1>중</S.SignUpUserH1>
               <img src="" alt="" />
             </S.SignUpUserBox>
           </Link>
-          <Link to="/ClockProgram">
+          <Link to="/ClockProgram" state={{ difficulty: 'low' }}>
             <S.SignUpUserBox>
               <S.SignUpUserH1>하</S.SignUpUserH1>
               <img src="" alt="" />
