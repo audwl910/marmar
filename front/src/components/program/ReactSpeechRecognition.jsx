@@ -4,21 +4,25 @@ import SpeechRecognition, {
 } from 'react-speech-recognition';
 
 export default function ReactSpeechRecognition() {
-  const {
-    transcript,
-    listening,
-    resetTranscript,
-    browserSupportsSpeechRecognition,
-  } = useSpeechRecognition();
+  const { transcript, listening, browserSupportsSpeechRecognition } =
+    useSpeechRecognition();
+
   const speechStart = () =>
     SpeechRecognition.startListening({
-      continous: true,
+      continuous: true,
       language: 'ko',
     });
-  const speechStop = () => SpeechRecognition.stopListening;
-  const speechTranscript = () => resetTranscript;
+
+  const speechStop = () => {
+    console.log(transcript);
+    SpeechRecognition.abortListening({
+      continuous: false,
+    });
+    console.log(transcript);
+  };
+
   if (!browserSupportsSpeechRecognition) {
-    return <span>speeking</span>;
+    return <span>speaking</span>;
   }
 
   return (
@@ -29,9 +33,6 @@ export default function ReactSpeechRecognition() {
       </button>
       <button type="button" onClick={speechStop}>
         Stop
-      </button>
-      <button type="button" onClick={speechTranscript}>
-        Reset
       </button>
       <p>{transcript}</p>
     </div>

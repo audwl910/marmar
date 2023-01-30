@@ -8,8 +8,6 @@ import reportWebVitals from './reportWebVitals';
 import Home from './pages/common/Home';
 import NotFound from './pages/common/NotFound';
 import SignIn from './pages/user/SignIn';
-import SpeechTherapyClass from './pages/program/SpeechTherapyClass';
-import SuffixTherapyClass from './pages/program/SuffixTherapyClass';
 import TherapistMypage from './pages/mypage/TherapistMypage';
 import StudentMypage from './pages/mypage/StudentMypage';
 import LoginRequiredPage from './pages/dev/LoginRequiredPage';
@@ -20,6 +18,10 @@ import SignUpStudent from './pages/user/SignUpStudent';
 import SignUpTherapist from './pages/user/SignUpTherapist';
 import SignUp from './pages/user/SignUp';
 import registerServiceWorker from './registerServiceWorker';
+import ClockDifficulty from './pages/program/clock/ClockDifficulty';
+import ClockProgram from './pages/program/clock/ClockProgram';
+import WordDifficulty from './pages/program/word/WordDifficulty';
+import WordProgram from './pages/program/word/WordProgram';
 
 const router = createBrowserRouter([
   {
@@ -40,8 +42,6 @@ const router = createBrowserRouter([
       { path: '/SignUp', element: <SignUp /> },
       { path: '/SignUpStudent', element: <SignUpStudent /> },
       { path: '/SignUpTherapist', element: <SignUpTherapist /> },
-      { path: '/SpeechTherapyClass', element: <SpeechTherapyClass /> },
-      { path: '/SuffixTherapyClass', element: <SuffixTherapyClass /> },
       { path: '/TherapistMypage', element: <TherapistMypage /> },
       { path: '/StudentMypage', element: <StudentMypage /> },
       { path: '/OpenVidu', element: <OpenVidu /> },
@@ -53,6 +53,10 @@ const router = createBrowserRouter([
           </ProtectedRoute>
         ),
       },
+      { path: '/WordDifficulty', element: <WordDifficulty /> },
+      { path: '/WordProgram', element: <WordProgram /> },
+      { path: '/ClockDifficulty', element: <ClockDifficulty /> },
+      { path: '/ClockProgram', element: <ClockProgram /> },
     ],
   },
 ]);
