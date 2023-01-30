@@ -9,19 +9,19 @@ export default function WordDifficulty() {
       <S.SignUpBox>
         <S.SignUpHeader>단어 읽기</S.SignUpHeader>
         <S.SignUpMiniBox>
-          <Link to="/WordProgram">
+          <Link to="/WordProgram" state={{ difficulty: 'high' }}>
             <S.SignUpUserBox>
               <S.SignUpUserH1>상</S.SignUpUserH1>
               <img src="" alt="" />
             </S.SignUpUserBox>
           </Link>
-          <Link to="/WordProgram">
+          <Link to="/WordProgram" state={{ difficulty: 'mid' }}>
             <S.SignUpUserBox>
               <S.SignUpUserH1>중</S.SignUpUserH1>
               <img src="" alt="" />
             </S.SignUpUserBox>
           </Link>
-          <Link to="/WordProgram">
+          <Link to="/WordProgram" state={{ difficulty: 'low' }}>
             <S.SignUpUserBox>
               <S.SignUpUserH1>하</S.SignUpUserH1>
               <img src="" alt="" />
