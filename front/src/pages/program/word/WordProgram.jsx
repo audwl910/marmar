@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReactSpeechRecognition from '../../../components/program/ReactSpeechRecognition';
+import { getWordApi } from '../../../api/programApi';
 import WordGame from '../../../components/program/WordGame';
 
 export default function WordProgram() {
   const location = useLocation();
   const difficulty = location.state?.difficulty;
+  const [wordData, setWordData] = useState([]);
   const [cnt, setCnt] = useState(0);
+
+  const getClockData = async () => {
+    console.log(difficulty);
+    const response = await getWordApi(difficulty);
+  };
+
+  useEffect(() => {
+    getClockData();
+  }, [difficulty]);
+
   const cntPlus = () => {
     cnt < 10 && setCnt(cnt + 1);
     console.log(setCnt);
