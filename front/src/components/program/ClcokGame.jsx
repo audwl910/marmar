@@ -1,6 +1,6 @@
-import React from 'react';
+// import React from 'react';
 
-export default function ClockGame() {
-  const lists = [];
-  data = props.data;
-}
+// export default function ClockGame() {
+//   const lists = [];
+//   data = props.data;
+// }

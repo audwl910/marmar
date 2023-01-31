@@ -22,6 +22,7 @@ import ClockDifficulty from './pages/program/clock/ClockDifficulty';
 import ClockProgram from './pages/program/clock/ClockProgram';
 import WordDifficulty from './pages/program/word/WordDifficulty';
 import WordProgram from './pages/program/word/WordProgram';
+import WordFinish from './pages/program/word/WordFinish';
 
 const router = createBrowserRouter([
   {
@@ -55,6 +56,7 @@ const router = createBrowserRouter([
       },
       { path: '/WordDifficulty', element: <WordDifficulty /> },
       { path: '/WordProgram', element: <WordProgram /> },
+      { path: '/WordFinish', element: <WordFinish /> },
       { path: '/ClockDifficulty', element: <ClockDifficulty /> },
       { path: '/ClockProgram', element: <ClockProgram /> },
     ],
