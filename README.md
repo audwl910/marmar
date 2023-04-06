@@ -2,7 +2,7 @@
 
 # 마르마르
 
-![image.png](../readmeImg/image.png)
+![image.png](./readmeImg/image.png)
 
 <br />
 
