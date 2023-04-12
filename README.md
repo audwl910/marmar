@@ -48,6 +48,11 @@ BackEnd
 FrontEnd
 - Node 16.18.0
 - OpenVidu
+- React
+- Styled-Components
+- TailwindCSS
+- @Tanstack React-query
+- Socket.io
 
 CI/CD
 - AWS EC2 (Ubuntu 20.04 LTS)
